@@ -1,8 +1,11 @@
 package Text::Morse;
+
 use strict qw(vars subs);
 use vars qw($VERSION %ENGLISH %SWEDISH %SVENSKA %LATIN);
 
-$VERSION = 0.01;
+$Text::Morse::VERSION = '0.02';
+
+no warnings 'qw';
 
 %ENGLISH = qw(
 A .-
@@ -103,7 +106,7 @@ sub Decode {
         my ($self, @codes) = @_;
         my @words = @codes;
         my $dec = $self->{'dec'};
-        my $sub = sub { $_ = $dec->{shift()}; $_ ? $_ : "<scrambled>"; };
+        my $sub = sub { $_ = $dec->{shift()}; defined($_) ? $_ : "<scrambled>"; }; 
         foreach (@words) {
                 s/([\.-]+)\s*/&$sub($1)/ge;
         }
