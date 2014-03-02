@@ -5,7 +5,7 @@ WriteMakefile(
   AUTHOR   => 'Phil Pollard <bennie@cpan.org>',
   LICENSE  => 'artistic_2',
   NAME     => 'Text::Morse',
-  VERSION  => '0.02',
+  VERSION  => '0.03',
 
   PREREQ_PM => {
           'Test::Simple' => '0'

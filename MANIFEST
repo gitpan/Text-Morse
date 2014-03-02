@@ -1,10 +1,11 @@
 Changes
 LICENSE
-MANIFEST
 Makefile.PL
+MANIFEST
 lib/Text/Morse.pm
+README
+t/00-pod.t
 t/01-load.t
 t/02-decode.t
 META.yml                                 Module meta-data (added by MakeMaker)
 META.json
-Makefile.PL

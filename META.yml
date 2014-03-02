@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Text-Morse
-version:            0.02
+version:            0.03
 abstract:           Encode and decode Morse code
 author:
     - Phil Pollard <bennie@cpan.org>
