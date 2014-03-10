@@ -3,7 +3,7 @@ package Text::Morse;
 use warnings;
 use strict;
 
-$Text::Morse::VERSION = '0.03';
+$Text::Morse::VERSION = '0.04';
 
 no warnings 'qw';
 
@@ -150,7 +150,7 @@ universal high ASCII (UNIX or Windows, not DOS) :-)
 
 =head1 VERSION
 
-	Text::Morse v0.03 (2014/03/01)
+	Text::Morse v0.04 (2014/03/09)
 
 =head1 COPYRIGHT
 

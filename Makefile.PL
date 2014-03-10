@@ -5,39 +5,46 @@ WriteMakefile(
   AUTHOR   => 'Phil Pollard <bennie@cpan.org>',
   LICENSE  => 'artistic_2',
   NAME     => 'Text::Morse',
-  VERSION  => '0.03',
+  VERSION  => '0.04',
 
   PREREQ_PM => {
+          'Test::More' => 0,
           'Test::Simple' => '0'
-        }
-,
+        },
 
   ( $ExtUtils::MakeMaker::VERSION < 6.46
         ? ()
         : ( META_MERGE => {
-                requires  => {perl => '5.006'},
+                'meta-spec' => { version => 2 },
+                no_index => {directory => [qw/t/]},
+                provides => 
+
+	{
+          'Text::Morse' => {
+                             'version' => '0.04',
+                             'file' => 'lib/Text/Morse.pm'
+                           }
+        },
+
+                release_status => 'stable',
                 resources => {
-                    # homepage => 'http://FIXME.org',
-                    # license  => 'http://dev.perl.org/licenses/',
-                    # MailingList => 'http://FIXME',
                     repository => {
                         type => 'git',
                         url  => 'git://github.com/bennie/perl-Text-Morse.git',
                         web  => 'http://github.com/bennie/perl-Text-Morse',
                     },
                     bugtracker => {
-                        # mailto => '...',
                         web => 'https://rt.cpan.org/Dist/Display.html?Name=Text-Morse',
                     },
 
                 },
-                no_index => {directory => [qw/t/]},
-            },
-            META_ADD => {
-                build_requires     => {},
-                configure_requires => {}
             },
         )
-    )
+    ),
+
+  ( $ExtUtils::MakeMaker::VERSION < 6.48
+        ? ()
+        : ( MIN_PERL_VERSION => '5.006001' )
+  )
 
 );

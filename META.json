@@ -3,30 +3,46 @@
    "author" : [
       "Phil Pollard <bennie@cpan.org>"
    ],
-   "description" : "Encode and decode Morse code",
    "dynamic_config" : 1,
-   "generated_by" : "CPAN::Meta version 2.132830",
+   "generated_by" : "ExtUtils::MakeMaker version 6.9, CPAN::Meta::Converter version 2.140630",
    "license" : [
       "artistic_2"
    ],
    "meta-spec" : {
-      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "url" : "https://metacpan.org/pod/CPAN::Meta::Spec",
       "version" : "2"
    },
    "name" : "Text-Morse",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "inc",
+         "t"
+      ]
+   },
    "prereqs" : {
       "build" : {
          "requires" : {
-            "Test::Simple" : "0",
-            "perl" : "5.006"
+            "ExtUtils::MakeMaker" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0"
          }
       },
       "runtime" : {
-         "recommends" : {},
          "requires" : {
+            "Test::More" : "0",
             "Test::Simple" : "0",
-            "perl" : "5.006"
+            "perl" : "5.006001"
          }
+      }
+   },
+   "provides" : {
+      "Text::Morse" : {
+         "file" : "lib/Text/Morse.pm",
+         "version" : "0.04"
       }
    },
    "release_status" : "stable",
@@ -34,14 +50,11 @@
       "bugtracker" : {
          "web" : "https://rt.cpan.org/Dist/Display.html?Name=Text-Morse"
       },
-      "license" : [
-         "http://dev.perl.org/licenses/"
-      ],
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/bennie/perl-Text-Morse.git",
          "web" : "http://github.com/bennie/perl-Text-Morse"
       }
    },
-   "version" : "0.03"
+   "version" : "0.04"
 }
